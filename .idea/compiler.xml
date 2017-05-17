@@ -9,8 +9,8 @@
         <module name="trader" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="trader" target="1.8" />
+    <bytecodeTargetLevel target="1.7">
+      <module name="trader" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

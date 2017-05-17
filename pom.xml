@@ -16,12 +16,21 @@
     <dependencies>
 
 
-<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.reflections/reflections &ndash;&gt;
+
+        <!-- https://mvnrepository.com/artifact/org.datavec/datavec-api -->
         <dependency>
-            <groupId>org.reflections</groupId>
-            <artifactId>reflections</artifactId>
-            <version>0.9.11</version>
-        </dependency>-->
+            <groupId>org.datavec</groupId>
+            <artifactId>datavec-api</artifactId>
+            <version>0.7.2</version>
+        </dependency>
+
+
+        <!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.reflections/reflections &ndash;&gt;
+                <dependency>
+                    <groupId>org.reflections</groupId>
+                    <artifactId>reflections</artifactId>
+                    <version>0.9.11</version>
+                </dependency>-->
 
 <!--
         &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.commons/commons-io &ndash;&gt;
@@ -75,12 +84,6 @@
             <version>0.8.0</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.datavec/datavec-api -->
-        <dependency>
-            <groupId>org.datavec</groupId>
-            <artifactId>datavec-api</artifactId>
-            <version>0.8.0</version>
-        </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.bytedeco/javacv -->
         <dependency>
@@ -234,13 +237,13 @@
     </dependencies>
 
     <build>
-        <finalName>ruarmy</finalName>
+        <finalName>trader</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>1.7</source>
+                    <target>1.7</target>
                 </configuration>
             </plugin>
             <!-- <plugin>
