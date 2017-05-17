@@ -1,0 +1,31 @@
+<b:beans xmlns="http://www.springframework.org/schema/security"
+		 xmlns:b="http://www.springframework.org/schema/beans"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd">
+
+	<http auto-config="true">
+		<intercept-url pattern="/admin*" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/welcome" access="hasAnyRole('ROLE_USER','ROLE_ADMIN')" />
+		<intercept-url pattern="/api*" access="hasAnyRole('ROLE_USER','ROLE_ADMIN')" />
+		<form-login
+				login-page="/login"
+				default-target-url="/"
+				authentication-failure-url="/login"
+				username-parameter="username"
+				password-parameter="password" />
+		<logout logout-success-url="/" logout-url="/logout" />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="Sveta" password="13579SvEt" authorities="ROLE_USER" />
+				<user name="user" password="xignusbe" authorities="ROLE_USER" />
+				<user name="kvs" password="xignusbe" authorities="ROLE_ADMIN" />
+				<user name="Adminmonster" password="monster3717kukushka" authorities="ROLE_ADMIN" />
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+
+</b:beans>

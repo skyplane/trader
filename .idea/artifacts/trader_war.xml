@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="trader:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="ruarmy.war">
+      <element id="artifact" artifact-name="trader:war exploded" />
+    </root>
+  </artifact>
+</component>
