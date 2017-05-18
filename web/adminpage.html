@@ -32,8 +32,9 @@
                     $('#signalsTable').DataTable({
                         destroy: true,
                         language: dtLocale,
-                        columns: [{data: "text"}, {data: {_: "date_display", sort: "date_sorted"}}, {data: "deleted"}],
-                        data: json.data
+                        columns: [{data: "text"}, {data: "date_display"}, {data: "deleted"}],
+                        data: json.data,
+                        order: [1, 'desc']
                     });
                 },
                 "json"

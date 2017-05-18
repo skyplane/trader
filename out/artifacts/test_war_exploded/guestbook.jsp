@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="skyplane.GuestbookEntry" %>
+<%@ page import="main.java.skyplane.GuestbookEntry" %>
 <%@ page import="java.util.List" %>
 
 <html>

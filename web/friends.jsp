@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="skyplane.Friend" %>
-<%@ page import="skyplane.FriendUtils" %>
+<%@ page import="main.java.skyplane.Friend" %>
+<%@ page import="main.java.skyplane.FriendUtils" %>
 <%@ page import="java.util.List" %>
 
 <html><body>

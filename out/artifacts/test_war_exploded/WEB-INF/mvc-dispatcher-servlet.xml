@@ -8,7 +8,7 @@
         http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
 
-    <context:component-scan base-package="skyplane.controller"/>
+    <context:component-scan base-package="main.java.skyplane.controller"/>
 
     <bean class = "org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
         <property name="messageConverters">

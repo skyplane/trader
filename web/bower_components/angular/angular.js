@@ -1630,7 +1630,7 @@ function allowAutoBootstrap(document) {
     link.href = src.value;
 
     if (document.location.origin === link.origin) {
-      // Same-origin resources are always allowed, even for non-whitelisted schemes.
+      // Same-origin main.resources are always allowed, even for non-whitelisted schemes.
       return true;
     }
     // Disabled bootstrapping unless angular.js was loaded from a known scheme used on the web.
@@ -12532,7 +12532,7 @@ function createHttpBackend($browser, createXhr, $browserDefer, callbacks, rawDoc
         var status = xhr.status === 1223 ? 204 : xhr.status;
 
         // fix status code when it is 0 (0 status is undocumented).
-        // Occurs when accessing file resources or on Android 4.1 stock browser
+        // Occurs when accessing file main.resources or on Android 4.1 stock browser
         // while retrieving files from application cache.
         if (status === 0) {
           status = response ? 200 : urlResolve(url).protocol === 'file' ? 404 : 0;
@@ -16625,7 +16625,7 @@ function $ParseProvider() {
  * - `catch(errorCallback)` – shorthand for `promise.then(null, errorCallback)`
  *
  * - `finally(callback, notifyCallback)` – allows you to observe either the fulfillment or rejection of a promise,
- *   but to do so without modifying the final value. This is useful to release resources or do some
+ *   but to do so without modifying the final value. This is useful to release main.resources or do some
  *   clean-up that needs to be done whether the promise was rejected or resolved. See the [full
  *   specification](https://github.com/kriskowal/q/wiki/API-Reference#promisefinallycallback) for
  *   more information.
@@ -18773,7 +18773,7 @@ function adjustMatchers(matchers) {
  * The default instance of `$sceDelegate` should work out of the box with little pain.  While you
  * can override it completely to change the behavior of `$sce`, the common case would
  * involve configuring the {@link ng.$sceDelegateProvider $sceDelegateProvider} instead by setting
- * your own whitelists and blacklists for trusting URLs used for loading AngularJS resources such as
+ * your own whitelists and blacklists for trusting URLs used for loading AngularJS main.resources such as
  * templates.  Refer {@link ng.$sceDelegateProvider#resourceUrlWhitelist
  * $sceDelegateProvider.resourceUrlWhitelist} and {@link
  * ng.$sceDelegateProvider#resourceUrlBlacklist $sceDelegateProvider.resourceUrlBlacklist}
